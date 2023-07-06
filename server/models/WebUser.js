@@ -15,7 +15,8 @@ const WebUserSchema = new mongoose.Schema({
     codeCounter: {
         type:Number,
         default: 3
-    }
+    },
+    forgetToken:String
 })
 
 const WebUser = new mongoose.model('WebUser', WebUserSchema);

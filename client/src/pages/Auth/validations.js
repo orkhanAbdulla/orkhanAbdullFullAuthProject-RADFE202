@@ -5,6 +5,10 @@ export const singUpValidations=object({
     password: string().required().min(5),
     confirmPassword:string().oneOf([ref('password')]).required()
 })
+export const changePasswordValidations=object({
+    password: string().required().min(5),
+    confirmPassword:string().oneOf([ref('password')]).required()
+})
 export const singInValidations=object({
     email: string().email().required(),
     password: string().required().min(5),

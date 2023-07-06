@@ -12,7 +12,7 @@ import { singInValidations } from "./validations";
 import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../../contex/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,NavLink } from "react-router-dom";
 
 export const LoginPage = () => {
   const navigate = useNavigate();
@@ -87,6 +87,12 @@ export const LoginPage = () => {
             error={touched.password && Boolean(errors.password)}
             helperText={touched.password && errors.password}
           />
+           <Button
+                  component={NavLink}
+                  to="/forgetpassword"
+                >
+                  Forget Password
+          </Button>
           <Grid marginTop={3}>
             <Button
               fullWidth
